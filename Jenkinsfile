@@ -34,6 +34,7 @@ label {
 				steps {
 						
 						sh "sudo docker-compose up"
+						sh "sudo docker exec 
 					
 						}
 				

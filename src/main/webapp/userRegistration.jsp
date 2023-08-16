@@ -13,7 +13,7 @@
     + lastName + "','" + email + "','" + userName + "','" + password + "', CURDATE())");
     if (i > 0) {
         response.sendRedirect("welcome.jsp");
-       
+        
     } else {
         response.sendRedirect("index.jsp");
     }

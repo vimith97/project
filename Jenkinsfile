@@ -12,7 +12,7 @@ label {
 		stage ('CLEAN_OLD_M2') {
 			
 			steps {
-				sh "rm -rf /home/vimith/.m2/repository"
+				sh "sudo rm -rf /home/vimith/.m2/repository"
 				
 			}
 		
@@ -29,12 +29,11 @@ label {
 		
 		}
 		
-		stage ('COPY_WAR_TO_Server'){
+		stage ('deploy on docker container'){
 		
 				steps {
 						
-						sh "sudo cp -r target/LoginWebApp.war /mnt/apache-tomcat-9.0.78/webapps/"
-
+						sh "sudo docker-compose up"
 					
 						}
 				

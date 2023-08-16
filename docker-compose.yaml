@@ -4,7 +4,7 @@ services:
   my-tomcat:
     image: 'tomcat:9'
     ports:
-    - '8080-8085:8080'
+    - '8081-8085:8080'
     volumes:
     - '/mnt/vol1:/usr/local/tomcat/webapps'
 
@@ -16,7 +16,7 @@ services:
       MYSQL_USER: admin
       MYSQL_PASSWORD: admin123
     ports:
-      - "3306:3306"
+      - "3307:3306"
     volumes:
       - mysql_data:/var/lib/mysql
 

@@ -34,8 +34,8 @@ label {
 				steps {
 						
 						sh "sudo docker-compose up"
-						sh "sudo docker exec -itd mysql_container create database test;
-						sh "sudo docker exec -itd mysql_container use database test;
+						sh "sudo docker exec -itd mysql_container create database test;"
+						sh "sudo docker exec -itd mysql_container use database test;"
 						sh "sudo docker exec -itd mysql_container CREATE TABLE `USER` (
   `id` int(10) unsigned NOT NULL auto_increment,
   `first_name` varchar(45) NOT NULL,
@@ -45,8 +45,8 @@ label {
   `password` varchar(45) NOT NULL,
   `regdate` date NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-						sh "sudo docker exec -itd mysql_container select * from USER;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;"
+						sh "sudo docker exec -itd mysql_container select * from USER;"
 					
 					
 						}
